@@ -192,7 +192,7 @@ export function ThemeProvider(props) {
         },
         palette: {
           primary: {
-            main: paletteType === 'light' ? blue[700] : blue[200],
+            main: '#d3002d',
           },
           secondary: {
             main: paletteType === 'light' ? darken(pink.A400, 0.1) : pink[200],
