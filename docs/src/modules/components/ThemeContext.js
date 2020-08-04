@@ -203,8 +203,75 @@ export function ThemeProvider(props) {
           },
           ...paletteColors,
         },
+        shape: {
+          borderRadius: 0,
+        },
         spacing,
+        overrides: {
+          MuiOutlinedInput: {
+            root: {
+              '&$focused $notchedOutline': {
+                'border-color': '#00a3a3',
+              },
+            },
+          },
+          MuiInputBase: {
+            formControl: {
+              color: 'iron',
+            },
+          },
+          MuiFormLabel: {
+            root: {
+              '&$focused': {
+                fontWeight: 'bold',
+                color: '#3d3b49',
+              },
+            },
+            focused: {},
+          },
+          MuiInput: {
+            underline: {
+              '&&&:before': {
+                borderBottom: 'none',
+              },
+              '&&:after': {
+                borderBottom: 'none',
+              },
+            },
+            '&:focus': {
+              'border-radius': '.143em',
+              border: '.3em solid #00a3a3',
+              'background-color': '#ffffff',
+            },
+          },
+          MuiInputLabel: {
+            focused: {
+              color: '#00a3a3',
+            },
+            formControl: {
+              height: '3rem',
+              'border-radius': '.143em',
+              padding: '.063rem .938rem 1rem 1.063rem',
+            },
+          },
+          MuiSelect: {
+            // Name of the rule
+            select: {
+              // Some CSS
+              border: '1px solid #3d3b49',
+              padding: '1.063rem .938rem 1rem 1.063rem',
+              height: '3rem',
+              'border-radius': '.143em',
+              '&:focus': {
+                'border-radius': '.143em',
+                border: '.143em solid #00a3a3',
+                'background-color': '#ffffff',
+              },
+            },
+          },
+        },
       },
+
       dense ? highDensity : null,
       languageMap[userLanguage],
     );
