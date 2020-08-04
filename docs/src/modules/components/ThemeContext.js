@@ -245,8 +245,10 @@ export function ThemeProvider(props) {
             },
           },
           MuiInputLabel: {
-            focused: {
-              color: '#00a3a3',
+            root: {
+              '&$focused': {
+                color: '#00a3a3',
+              },
             },
             formControl: {
               height: '3rem',
