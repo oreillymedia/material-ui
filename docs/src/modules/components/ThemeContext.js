@@ -203,8 +203,14 @@ export function ThemeProvider(props) {
           },
           ...paletteColors,
         },
+        typography: {
+          fontFamily: ['"Poppins"'].join(','),
+          button: {
+            textTransform: 'none',
+          },
+        },
         shape: {
-          borderRadius: 0,
+          borderRadius: '5px',
         },
         spacing,
         overrides: {
