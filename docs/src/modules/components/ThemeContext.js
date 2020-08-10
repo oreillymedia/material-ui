@@ -192,10 +192,10 @@ export function ThemeProvider(props) {
         },
         palette: {
           primary: {
-            main: '#d3002d',
+            main: '#202842',
           },
           secondary: {
-            main: paletteType === 'light' ? darken(pink.A400, 0.1) : pink[200],
+            main: '#0B69BA',
           },
           type: paletteType,
           background: {
@@ -216,9 +216,7 @@ export function ThemeProvider(props) {
         overrides: {
           MuiOutlinedInput: {
             root: {
-              '&$focused $notchedOutline': {
-                'border-color': '#00a3a3',
-              },
+              '&$focused $notchedOutline': {},
             },
           },
           MuiInputBase: {
@@ -235,6 +233,19 @@ export function ThemeProvider(props) {
             },
             focused: {},
           },
+          MuiButton: {
+            outlinedSecondary: {
+              color: '#000000',
+              'border-color': '#EFF0F7',
+            },
+            textSecondary: {
+              color: '#000000',
+            },
+            containedSecondary: {
+              color: '#000000',
+              'background-color': '#EFF0F7',
+            },
+          },
           MuiInput: {
             underline: {
               '&&&:before': {
@@ -246,15 +257,12 @@ export function ThemeProvider(props) {
             },
             '&:focus': {
               'border-radius': '.143em',
-              border: '.3em solid #00a3a3',
               'background-color': '#ffffff',
             },
           },
           MuiInputLabel: {
             root: {
-              '&$focused': {
-                color: '#00a3a3',
-              },
+              '&$focused': {},
             },
             formControl: {
               height: '3rem',
@@ -272,7 +280,6 @@ export function ThemeProvider(props) {
               'border-radius': '.143em',
               '&:focus': {
                 'border-radius': '.143em',
-                border: '.143em solid #00a3a3',
                 'background-color': '#ffffff',
               },
             },
